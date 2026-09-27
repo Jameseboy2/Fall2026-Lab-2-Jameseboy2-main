@@ -77,6 +77,7 @@ void show_a_random_number(void);
 void got_start(void);
 void got_stop(void);
 void got_fastest(void);
+void flash_last_reaction_time(void);
 int best_reaction_time_in_millisec = 99999;  //Start with something easy to beat
 
 /* USER CODE END PFP */
@@ -155,7 +156,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	// show_a_random_number();
-	  while (!got_start_button);
+	  while (!got_start_button) flash_last_reaction_time();   // Extra credit: flash the result until the next Start
 	  got_start();
 	  got_start_button = false;
 	  while (!got_stop_button);

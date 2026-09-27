@@ -51,6 +51,8 @@ void shiftOut(	GPIO_TypeDef* dataPort,uint16_t dataPin,
 const uint8_t SEGMENT_MAP[] = {0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90};    // Segmente, die leuchten sollen pro Zahlwert (Low-Aktiv), & 0x7F Verknüpfen fuer Dezimalpunkt
 const uint8_t SEGMENT_BLANK = 0xFF;
 const uint8_t SEGMENT_MINUS = 0xBF;
+const uint8_t SEGMENT_E = 0x86;
+const uint8_t SEGMENT_r = 0xAF;
 const uint8_t SEGMENT_SELECT[] = {0xF1,0xF2,0xF4,0xF8};                               // Ziffernposition (gemeinsame Anode, LSB)
 volatile uint8_t ActDigit = 0;
 volatile uint8_t SEGMENT_VALUE[4];
@@ -179,6 +181,15 @@ void Display_Waiting(void)
 void Display_All(void)
 	{
 	MultiFunctionShield_Display(8888);
+	}
+
+void Display_Error(void)
+	{
+	// Shows " Err"
+	SEGMENT_VALUE[0] = SEGMENT_BLANK;
+	SEGMENT_VALUE[1] = SEGMENT_E;
+	SEGMENT_VALUE[2] = SEGMENT_r;
+	SEGMENT_VALUE[3] = SEGMENT_r;
 	}
 
 

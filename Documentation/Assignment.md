@@ -139,4 +139,4 @@ For Seven Segment Display Functions, check the MultiFunctionShield.h header file
 
 * Currently, the reaction tester can have a wait time anywhere between 0 and 7000 milliseconds, Implement a minimum wait time in such a way that doesn't change the potential maximum wait time
 
-If you do any of these items - just mention what and how it worked, [*here*].
+If you do any of these items - just mention what and how it worked, [*I did two: Cheating indicator and Flashing result.]

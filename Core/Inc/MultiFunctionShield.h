@@ -7,5 +7,6 @@ void MultiFunctionShield__ISRFunc(void);
 void MultiFunctionShield_Clear(void);
 void Display_Waiting(void);
 void Display_All(void);
+void Display_Error(void);
 void OneSecond_Show_Potentiometer__ISRFunc(void);
 void Clear_LEDs(void);
