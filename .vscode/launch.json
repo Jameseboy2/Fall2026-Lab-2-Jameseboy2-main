@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug STM32 (FreeRTOS)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "openocd",
+      "cwd": "${workspaceFolder}",
+      "executable": "build/ECEN-361-STM32-Lab-04-FreeRTOS.elf",
+      "device": "STM32L476RG",
+      "interface": "swd",
+      "svdFile": "STM32L476.svd",
+      "rtos": "FreeRTOS",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32l4x.cfg"
+      ]
+    }
+  ]
+}
